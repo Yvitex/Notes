@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Batch Gradient Descent</title>
+</head><body><b><i><span style="font-size: 20pt">Gradient Descent with multiple parameters</span></i></b><br/>
+<br/>
+<img src="image.png" /><br/>
+<br/>
+<span style="font-size: 16pt"><b>Equation:</b></span><br/>
+<br/>
+<img src="image 9.png" /><br/>
+<br/>
+<b><span style="font-size: 14pt">Algorithm:</span></b><br/>
+<br/>
+<img src="image 2.png" /><br/>
+<br/>
+<span style="font-size: 15pt"><b>Partial Derivatives:<br/>
+<br/>
+</b></span><img src="image 10.png" /><br/>
+<br/>
+<br/>
+For a number of iterations, we specify the gradients of each parameters by differentialting the function c(a, b) in respect to their constant. For gradient x, we get the derivative of the function in respect to x or a, for gradient y, we get their respective derivatives<br/>
+in respect to y. This is called Partial Derivatives<br/>
+<br/>
+<br/>
+&nbsp;<img src="image 3.png" /><br/>
+<br/>
+<br/>
+After setting their derivative, we evaluate them both to the initial guess array using (evalf) method. In this case, initial_guess[0] and initial_guess[1].<br/>
+<br/>
+&nbsp;<img src="image 4.png" /><br/>
+<br/>
+Because we are working with a three dimensional gradient descent, we merge this 2 gradients into one array by using<br/>
+<br/>
+<img src="image 5.png" /><br/>
+<br/>
+After that. Optimize the initial guess by multiplying the multiplier with the gradients and substracting the resulting value to the previous initial_guess<br/>
+<br/>
+<img src="image 6.png" /><br/>
+<br/>
+<b><span style="font-size: 15pt">Optimization: </span></b><br/>
+<ul><li style="list-style-type: none"><img src="image 7.png" /></li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none">where we specify hard coded functions such as </li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none"><img src="image 8.png" /></li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none">instead of differentialting each time the code run using diff method which is a little bit of extensive when it comes to resources, we instead readily coded the functions to be used that makes the algorithm runs much faster. </li>
+<li style="list-style-type: none"></li>
+<li style="list-style-type: none">Note: Remember to mind the resouces the algoritm takes. </li>
+</ul>
+<br/>
+</body></html>

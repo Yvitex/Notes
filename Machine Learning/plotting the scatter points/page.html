@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Plotting the Scatter Points</title>
+</head><body><b><span style="font-size: 20pt">Scatter Points in a 3d Graphs?</span></b><br/>
+<br/>
+<img src="image.png" /><br/>
+<br/>
+First,we need to store the guesses, from initial to final guess in a numpy array. Normally, it is not possible because of the shape of our array but using the .reshape() method, it is possible. <br/>
+<br/>
+<img src="image 2.png" /><br/>
+<br/>
+After that, we will append the rest of the values from the loop.<br/>
+<br/>
+<img src="image 3.png" /><br/>
+<br/>
+Axis=0 means, we append the values in row, axis=1 is on column. keyword arguments such as arr= accepts the target array we wanted to be appended and values= accepts values to be added. The 2 arrays mush have a similar shape, in this case, they both have the shape of &nbsp;(1, 2), 1 rows and 2 columns. <br/>
+<br/>
+<img src="image 4.png" /><br/>
+<br/>
+Within our initial 3d figure. We added the .scatter() method acceptign the values of x, y and z. The guess collections contain each and every values from x and y, z is equivalent to the function with the parameters of x and y from guess_collection. with, that, we plotted our scatter plots. <br/>
+<br/>
+<b><span style="font-size: 15pt">Graphs!! </span></b><br/>
+<img src="image 5.png" /><br/>
+<br/>
+</body></html>

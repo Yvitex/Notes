@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>API</title>
+</head><body><b><span style="font-size: 20pt">API</span></b><br/>
+<br/>
+API or application programming interface is an interface, or a barrier that connects you to an external system. This regulates the amount of data you can take from an external server. <br/>
+<br/>
+To interact with the external system, we first need to create an API request, in a simple API, this will respond to us by giving us some information in a JSON kind of format. We do this by using what we call an Endpoint. <br/>
+<br/>
+Here is an example of an endpoint which is basically just a url.<br/>
+<br/>
+<img src="image.png" /><br/>
+<br/>
+It respond like this.<br/>
+<br/>
+<img src="image 2.png" /><br/>
+<br/>
+We can use the extension JSON viewer awesome to print this out in a nice format. <br/>
+<br/>
+<img src="image 3.png" /><br/>
+<br/>
+To create a request using a python syntax, first we need to import the request module which is not installed in our standard library<br/>
+<br/>
+<img src="image 4.png" /><br/>
+<br/>
+Then we use this to get response to the specified url <br/>
+<br/>
+<img src="image 5.png" /><br/>
+<br/>
+When we print these response code, the console will ourput this<br/>
+<br/>
+<img src="image 6.png" /><br/>
+<br/>
+200 is a response code meaning OK. Still, this is a very vague response for a response code, to detect an error using this, we could raise an exception for it by using the method .raise_for_status()<br/>
+<br/>
+<img src="image 7.png" /><br/>
+<br/>
+To actually get the data from the response variable, we could convert the response to a json file by using json()<br/>
+<br/>
+<img src="image 8.png" /><br/>
+<br/>
+TThis will print out all data inside, but to narrow down the data, we can use bracket notation to track it down. <br/>
+<br/>
+<img src="image 9.png" /><br/>
+<br/>
+<img src="image 10.png" /><br/>
+<br/>
+Printing this out, we could get the data in a tuple. <br/>
+<br/>
+</body></html>

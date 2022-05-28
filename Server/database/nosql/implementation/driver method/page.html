@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Driver Method</title>
+</head><body><b><span style="font-size: 20pt">MongoDb's Driver Method with Node.js</span></b><br/>
+<br/>
+<img src="image.png" /><br/>
+<br/>
+There are a lot of drivers out there and this will enable our node js to utilize the database. The first step we need to do is to initialize our driver by creating a new package.json to our app using command:<br/>
+<br/>
+<b>npm init -y</b><br/>
+<br/>
+-y will say yes to every default options. Then now we can install the external package driver by saying<br/>
+<br/>
+<b>npm i mongodb<br/>
+</b><b>npm install mongodb@4.5</b>&nbsp; <br/>
+<br/>
+<img src="image 2.png" /><br/>
+<br/>
+<b><span style="font-size: 15pt">Here are the code inside the app.js code</span></b><br/>
+<br/>
+<img src="image 3.png" /><br/>
+<br/>
+It starts by importing the module to work with database with mongoClient method for older node js version. Assert module is also not so, required for testing, validates our connection to the database. Mongo db connects with local host 27017, dbName will be our new database name. The we assign the client with our url and connects to the server. If all of that happen without any error, it loads "connected successfull". Then we will close the connection. <br/>
+<br/>
+<br/>
+The newer version of mongo have atlas features<br/>
+<br/>
+<img src="image 4.png" /><br/>
+<br/>
+Which is a bit troubling. <br/>
+<br/>
+<img src="image 5.png" /><br/>
+<br/>
+THis syntax works on the latest version as of 2022.<br/>
+<br/>
+<img src="image 6.png" /><br/>
+<br/>
+This is used to connect with the Atlas server, dbName is the name of the database, I created the collection using databse variable then collection method specifying the name of document then storing it inside fruits for later use when inserting some data. <br/>
+<br/>
+<img src="image 7.png" /><br/>
+<br/>
+<br/>
+next is to specify the data to be inserted inside an array of objects. using await, we inserted the collection of fruits with insert many passing the variable containing the array. next is checking the success of passing the data. <br/>
+<br/>
+<img src="image 8.png" /><br/>
+<br/>
+We catch the exception here. <br/>
+<br/>
+Basically, this is just a copy paste methodology with painful syntax, the better way to do this will less codes is through... guess what, a fucking module called ODM or object document mapping which is called <b>mongoose. </b><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</body></html>

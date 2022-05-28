@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Calculating the MSE</title>
+</head><body><b><span style="font-size: 20pt">Mean Squared Error</span></b><br/>
+<br/>
+Formula is:<br/>
+<br/>
+<span style="font-size: 15pt"><b>&nbsp;y_hat = theta0 + theta1 * x<br/>
+</b></span><b><span style="font-size: 20pt"><br/>
+<img src="image 2.png" /><br/>
+<br/>
+</span></b>Where x is an array of values. Y_hat is equivalent of saying regr.predict(x), where regr is an object of LinearRegression() from sklearn module. <br/>
+<br/>
+<img src="image.png" /><br/>
+<br/>
+<b><span style="font-size: 16pt">C</span><span style="font-size: 15pt">onverting the MSE formula into code</span></b><br/>
+<br/>
+<img src="image 3.png" /><br/>
+<br/>
+<img src="image 4.png" /><br/>
+<br/>
+At which we summed the values inside the sqaure before multiplying it to the 1/n. Other way of calculating the same function in one line of code is just by simply using a method from sklearn. <br/>
+<br/>
+<img src="image 5.png" /><br/>
+<br/>
+<img src="image 6.png" /><br/>
+<br/>
+This method will output the same values as our function. In addition, we could also shortcut calculating our y_hat by simply saying<br/>
+<br/>
+<img src="image 7.png" /></body></html>
