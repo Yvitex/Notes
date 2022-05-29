@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>ODM Method</title>
+<title>Create and  ODM Method</title>
 </head><body><b><span style="font-size: 20pt">Object Document Model Method And Create Method<br/>
 <br/>
 </span></b>First step is to install mongoose using the command line. <br/>
@@ -24,6 +24,12 @@ Dunno how, but because this is an old version of mongoose, we may need to add ad
 After this, we can create a new schema, what's a schema you ask? Like SQL, it is a basic setup of the object data you want to import to the database. Here is the syntax.<br/>
 <br/>
 <img src="image 5.png" /><br/>
+<br/>
+We could also create a <b>schema inside a schema</b>, if you want a collection of that same schema in a form of an array, we could do...<br/>
+<br/>
+<img src="image 15.png" /><br/>
+<br/>
+In this, items store an array of itemsSchema documents.<br/>
 <br/>
 Then now we could create a model for our schema, this accepts 2 parameters, first is the name of the collection inside the database and another is the schema it needs to follow.<br/>
 <br/>
@@ -55,15 +61,15 @@ What we need to do is just using CollectionName.insertMany() method<br/>
 <br/>
 This method accepts an array as its first argument containing all variable names containing the object data, second argument is a callback function that check if an error occurs. <br/>
 <br/>
-<span style="font-size: 15pt"><b>Insertion Validation<br/>
+<b><span style="font-size: 15pt">Insertion Validation<br/>
 <br/>
-</b><span style="font-size: 10pt">Inside our schema, we can specify the limit the value of data inserted to the collection of our database. We do this by setting another pair of curly braces inside the key schema.<br/>
+</span></b><span style="font-size: 15pt"><span style="font-size: 10pt">Inside our schema, we can specify the limit the value of data inserted to the collection of our database. We do this by setting another pair of curly braces inside the key schema.<br/>
 <br/>
 </span><img src="image 13.png" /><br/>
 <br/>
-</span><span style="font-size: 10pt">String, and Number are both just a shorthand o<b>f type: String or type: Number</b>&nbsp;and when we use validator, we need to specify it directly using the exact syntax. Number have valdiator such as min and max that checks wether a vlaue is less or greater than a number. </span><span style="font-size: 15pt"><b><br/>
-</b></span><span style="font-size: 15pt"><b><br/>
-</b><span style="font-size: 10pt">We can also make a data required in a document, we just need to specify a required key with a value of true, it can also be an array where index 0 is a boolean and index 1 is a message to be printed to the console<b><br/>
+</span><span style="font-size: 10pt">String, and Number are both just a shorthand o<b>f type: String or type: Number</b>&nbsp;and when we use validator, we need to specify it directly using the exact syntax. Number have valdiator such as min and max that checks wether a vlaue is less or greater than a number. </span><b><span style="font-size: 15pt"><br/>
+</span></b><b><span style="font-size: 15pt"><br/>
+</span></b><span style="font-size: 15pt"><span style="font-size: 10pt">We can also make a data required in a document, we just need to specify a required key with a value of true, it can also be an array where index 0 is a boolean and index 1 is a message to be printed to the console<b><br/>
 </b><b><br/>
 </b></span><b><img src="image 14.png" /><br/>
 <br/>
